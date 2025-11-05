@@ -26,10 +26,10 @@ public class CompraDiariaServiceImp implements CompraDiariaService {
     public CompraDiaria registrarCompraDiaria(LocalDate fecha, BigDecimal montoConFactura, BigDecimal montoSinFactura) {
 
         // Validar que al menos uno no sea null o <= 0
-        if ((montoConFactura == null || montoConFactura.compareTo(BigDecimal.ZERO) <= 0)
-                && (montoSinFactura == null || montoSinFactura.compareTo(BigDecimal.ZERO) <= 0)) {
-            throw new RuntimeException("Debe proporcionar al menos un monto válido (con o sin factura)");
-        }
+//        if ((montoConFactura == null || montoConFactura.compareTo(BigDecimal.ZERO) <= 0)
+//                && (montoSinFactura == null || montoSinFactura.compareTo(BigDecimal.ZERO) <= 0)) {
+//            throw new RuntimeException("Debe proporcionar al menos un monto válido (con o sin factura)");
+//        }
 
         // Convertir null a ZERO
         BigDecimal conFactura = (montoConFactura != null && montoConFactura.compareTo(BigDecimal.ZERO) > 0)

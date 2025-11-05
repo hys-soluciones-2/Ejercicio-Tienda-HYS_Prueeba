@@ -10,6 +10,7 @@ import java.time.format.DateTimeParseException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author Hugo
  */
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/compras-diarias")
 public class CompraDiariaController {
@@ -85,7 +87,7 @@ public class CompraDiariaController {
      * "montoSinFactura": 200.00 }
      */
     @PutMapping("/actualizar/fecha/{fecha}")
-    public ResponseEntity<CompraDiaria> actualizarVentaDiaria(
+    public ResponseEntity<CompraDiaria> actualizarCompraDiaria(
             @PathVariable String fecha,
             @RequestBody ActualizarCompraDTO dto) {
 
