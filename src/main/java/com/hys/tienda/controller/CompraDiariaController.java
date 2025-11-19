@@ -78,6 +78,9 @@ public class CompraDiariaController {
     public ResponseEntity<List<CompraDiaria>> listarTodasLasCompras() {
 
         List<CompraDiaria> compras = compraDiariaService.listarTodasLasCompras();
+        // Ordenar por fechaCompra descendente
+        compras.sort((c1, c2) -> c2.getFechaCompra().compareTo(c1.getFechaCompra()));
+
         return ResponseEntity.ok(compras);
     }
 

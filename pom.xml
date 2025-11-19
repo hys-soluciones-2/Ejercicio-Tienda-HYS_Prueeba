@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hys.tienda</groupId>
-	<artifactId>hys_Copia_4</artifactId>
+	<artifactId>Proyecto-Tienda-HYS-BackEnd</artifactId>
 	<version>1.0</version>
-	<name>hys_Copia_4</name>
+	<name>Proyecto-Tienda-HYS-BackEnd</name>
 	<description>Tienda project for Spring Boot</description>
 	<url/>
 	<licenses>
