@@ -180,5 +180,19 @@ public class CompraDiariaController {
         }
 
     }
+    
+    //*************************************************************
+
+    @GetMapping("/MesActualConFactura")
+    public ResponseEntity<BigDecimal> obtenerTotalMesActualConFactura() {
+        BigDecimal total = compraDiariaService.obtenerTotalMesActualConFactura();
+        return ResponseEntity.ok(total);
+    }
+
+    @GetMapping("/MesActualSinFactura")
+    public ResponseEntity<BigDecimal> obtenerTotalMesActualSinFactura() {
+        BigDecimal total = compraDiariaService.obtenerTotalMesActualSinFactura();
+        return ResponseEntity.ok(total);
+    }
 
 }

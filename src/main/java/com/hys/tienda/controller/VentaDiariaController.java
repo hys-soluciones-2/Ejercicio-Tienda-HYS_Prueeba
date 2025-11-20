@@ -77,9 +77,8 @@ public class VentaDiariaController {
     public ResponseEntity<List<VentaDiaria>> listarTodasLasVentas() {
         List<VentaDiaria> ventas = ventaDiariaService.listarTodasLasVentas();
         // Ordenar por fechaCompra descendente
-    ventas.sort((c1, c2) -> c2.getFechaVenta().compareTo(c1.getFechaVenta()));
+        ventas.sort((c1, c2) -> c2.getFechaVenta().compareTo(c1.getFechaVenta()));
 
-   
         return ResponseEntity.ok(ventas);
     }
 

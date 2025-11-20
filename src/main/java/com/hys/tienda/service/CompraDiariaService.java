@@ -58,6 +58,12 @@ public interface CompraDiariaService {
 
     @Transactional(readOnly = true)
     public BigDecimal obtenerTotalCompraSinFacturaEnRango(LocalDate fechaInicio, LocalDate fechaFin);
+    
+    @Transactional(readOnly = true)
+    public BigDecimal obtenerTotalMesActualSinFactura();
+
+    @Transactional(readOnly = true)
+    public BigDecimal obtenerTotalMesActualConFactura();
    
    
     

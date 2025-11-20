@@ -143,5 +143,23 @@ public class CompraDiariaServiceImp implements CompraDiariaService {
     }
     //*******************************************************
 
+       /**
+     * Obtiene el total del mes actual
+     */
+    @Override
+    public BigDecimal obtenerTotalMesActualSinFactura() {
+        LocalDate hoy = LocalDate.now();
+        LocalDate inicioMes = hoy.withDayOfMonth(1);
+        LocalDate finMes = hoy.withDayOfMonth(hoy.lengthOfMonth());
+        return CompraRepository.sumTotalEnRangoSinFactura(inicioMes, finMes);
+    }
+    
+      @Override
+    public BigDecimal obtenerTotalMesActualConFactura() {
+        LocalDate hoy = LocalDate.now();
+        LocalDate inicioMes = hoy.withDayOfMonth(1);
+        LocalDate finMes = hoy.withDayOfMonth(hoy.lengthOfMonth());
+        return CompraRepository.sumTotalEnRangoConFactura(inicioMes, finMes);
+    }
 //***********************************************************
 }
